@@ -20,7 +20,7 @@ echo '\033[01;32m
 ------------------------------------------------------
 # na musica vc cola só o id dela exemplo = pIU7P2vbTU
 ------------------------------------------------------
-salve: LILITH | Alivemindset | SmogHoax | xCyf
+salve: LILITH | Alivemindset | SmogHoax | xCyf | STorm
 '
 echo '\033[01;37mescolha qual index deseja fazer.... '
 echo '=================================='
