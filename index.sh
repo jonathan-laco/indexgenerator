@@ -12,15 +12,7 @@ echo '\033[01;32m
 \\\\\\\\\\\ \033[01;37m j(*)RD150N \033[01;32m ///////////
 --------------------------------
 \033[01;35mEmail : \033[01;37mjordison@protonmail.com
-\033[01;32mSpeed help
-\033[01;35m
-#use  cod hexadecimal para colocar a cor da fonte 
-------------------------------------------------------
-# na imagem aconselho usar links do imgur 
-------------------------------------------------------
-# na musica vc cola só o id dela exemplo = pIU7P2vbTU
-------------------------------------------------------
-salve: LILITH | Alivemindset | SmogHoax | xCyf | STorm
+
 '
 echo '\033[01;37mescolha qual index deseja fazer.... '
 echo '=================================='
@@ -29,8 +21,10 @@ echo '\033[01;33m [1] index 1 > '
 echo '----------------------------------'
 echo '\033[01;33m [2] index 2 > '
 echo '----------------------------------'
-echo '\033[01;33m [3] sair > '
-echo '\033[01;37m============================'
+echo '\033[01;33m [3] help > '
+echo '----------------------------------'
+echo '\033[01;33m [4] sair > '
+echo '\033[01;37m=================================='
 echo 'escolha' && read selindex
 echo 'vc escolheu a index numero' $selindex
 if [ $selindex -eq 1 ]
@@ -180,13 +174,43 @@ sleep 2
 exit
 
 elif [ $selindex -eq 3 ]
+ then
+ echo '
+  \033[01;32mSpeed help
+\033[01;35m
+
+=============================================================
+=-> use  cod hexadecimal para colocar a cor da fonte        =
+=-> na imagem aconselho usar links do imgur                 =
+=-> na musica vc cola so o id dela exemplo = pIU7P2vbTU     =
+=                                                           =
+=-> Background é o fundo da ṕágina                          =
+=-> Caso tenha algum erro, edite o proprio html             =
+=-> obs == PODE OCORRER  ALGUM ERRO NA MUSICA. fica a seu   =
+=   criterio configurar.                                    =
+= -> caso sua shell nao aceite as cores irei deixar o link  =
+= aqui do ghostbin para que vc use o script sem a cor.      =
+= ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=
+=     LINK = https://ghostbin.com/paste/cqody               =  
+=============================================================
+#############################################################
+salve ->
+-------------------------------------------------------------
+John Kaiser, Mindset Security, LILITH, Kyz team 
+-------------------------------------------------------------
+Alivemindset, xCyf, Deivid, SmogHoax and  John-Cross
+#############################################################'
+echo
+sleep 20
+sh index.sh
+elif [ $selindex -eq 4 ]
 then
 echo " 
 \033[01;31m
 
 
-   _|_|  _|                  
-  _|          _|_|_|  _|_|    
+   _|_|   _|                  
+  _|          _|_|_|_|_|_|_|    
 _|_|_|_|  _|  _|    _|    _|  
   _|      _|  _|    _|    _|  
   _|      _|  _|    _|    _|  
