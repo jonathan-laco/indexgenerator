@@ -1,59 +1,28 @@
-#ainda estou em aprenizado. releve qualquer erro :)
+#!bin/bash
+#Reinald - Jord
+#Script começa na linha 193
 
+#----------INDEX TIPO "1"
+index1() {
 clear
-echo '\033[01;32m
-01010101010101010101010101010101
-1    ********************      1
-0    * Gerador de index *      0
-1    ********************      1
-01010101010101010101010101010101
-|          + by +              |
--+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-\\\\\\\\\\\ \033[01;37m j(*)RD150N \033[01;32m ///////////
---------------------------------
-\033[01;35mEmail : \033[01;37mjordison@protonmail.com
-
-'
-echo '\033[01;37mescolha qual index deseja fazer.... '
-echo '=================================='
-echo '\0[33m----------------------------'
-echo '\033[01;33m [1] index 1 > '
-echo '----------------------------------'
-echo '\033[01;33m [2] index 2 > '
-echo '----------------------------------'
-echo '\033[01;33m [3] help > '
-echo '----------------------------------'
-echo '\033[01;33m [4] sair > '
-echo '\033[01;37m=================================='
-echo 'escolha' && read selindex
-echo 'vc escolheu a index numero' $selindex
-if [ $selindex -eq 1 ]
-then
-echo '\033[01;33mNome da sua html > '
-read arquivo
-echo >$arquivo
-echo
-sleep 1
-echo 'cor da fonte > '
-read cor
-echo
-echo 'seu Nickname > ' 
-read Nick
+echo -n "[+]Nome da sua html > " && read -r nomehtml
+test $nomehtml
+if [[ $? = 0 ]]; then
 echo 
-echo 'link da imagem > '
-read imagem
-echo
-echo 'frase > '
-read frase
-echo
-echo 'greetz > '
-read greetz 
-echo 'musica > '
-read musica
+else echo "Atenção! Digite o nome para html"
+sleep 1s
+index1 
+fi
+echo -n "[+]Cor da fonte > " && read -r cor
+echo -n "[+]Seu Nickname > "  && read -r Nick
+echo -n "[+]Link da imagem > " && read -r imagem
+echo -n "[+]Frase > " && read -r frase
+echo -n "[+]greetz > " && read -r greetz 
+echo -n "[+]musica > " && read -r musica
 echo "
 <html><head>
 	<title>HACKED</title>
-	<meta charset ="utf-8">
+	<meta charset =utf-8>
 <script>alert('owned')</script>
 	<style>
 		body {
@@ -78,40 +47,36 @@ echo "
  $greetz <br></marquee>
 <iframe src=\"https://www.youtube.com/embed/$musica?autoplay=true\" width=\"0\" height=\"0\" frameborder=\"0\"></iframe>
 </small></body></html>
- " >$arquivo
- clear
- echo 'fim.... script fechará em 2 segundos'
- sleep 2
- exit
+ " >> $nomehtml.html
+#fim do script (index 1)
+clear
+echo "Criado com Sucesso!"
+sleep 1s
+exit 
+}
 
-elif [ $selindex -eq 2 ]
-	then
-
-echo '\033[01;33mNome da sua html > '
-read arquivo
-echo >$arquivo
-echo
-sleep 1
-echo 'link background > '
-read link
-echo
-echo 'Seu Nickname > ' 
-read Nick
+#----------INDEX TIPO "2"
+index2() {
+clear
+echo -n "Nome da sua html > " && read -r nomehtml
+test $nomehtml
+if [[ $? = 0 ]]; then
 echo 
-echo 'salve > '
-read salve
-echo
-echo 'escolha uma frase : '
-read frase
-echo
-echo 'musica : '
-read musica
+else echo "Atenção! Digite o nome para html"
+sleep 1s
+index2
+fi
+echo -n "link background > " && read -r link
+echo -n "Seu Nickname > " && read -r Nick
+echo -n "salve > " && read -r salve
+echo -n "escolha uma frase : " && read -r frase
+echo -n "musica : " && read -r musica
 echo "
 <html>
 <head>
 <title>Owned</title>
 <style>
-<meta charset="utf-8">
+<meta charset=utf-8>
 body { 
   background: url( $link ) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -168,17 +133,38 @@ body {
 <DIV class=line2><font color=white><BIG> GREETZ:</BIG></div>
 <marquee><DIV class=line4><font color=white><BIG> $salve </BIG></div></font></marquee>
 <iframe src=\"https://www.youtube.com/embed/$musica?autoplay=true\"width=\"0\"height=\"0\"frameborder=\"0\"></iframe>
-" >$arquivo
-echo 'script fechando....'
-sleep 2
+" >> $nomehtml.html
+#fim do script(index 2)
+clear
+echo "Criado com Sucesso!"
+sleep 1s
 exit
+}
 
-elif [ $selindex -eq 3 ]
- then
- echo '
-  \033[01;32mSpeed help
-\033[01;35m
+#----------------BANNER--------------
+banner() {
+clear
+echo "Gerador de Deface
+==================================
+1- index1
+2- index2
+3- ajuda
+4- exit
+==================================
+[?]Escolha um numero: " && read -r selindex
+case $selindex in
+1) index1;;
+2) index2;;
+3) ajuda;;
+4) exit;;
+*) echo "Invalido, escolha 1, 2, 3 ou 4"; sleep 1s; banner;;
+esac
+}
 
+#-----------AJUDA
+ajuda() {
+echo "
+  AJUDA
 =============================================================
 =-> use  cod hexadecimal para colocar a cor da fonte        =
 =-> na imagem aconselho usar links do imgur                 =
@@ -191,7 +177,7 @@ elif [ $selindex -eq 3 ]
 = -> caso sua shell nao aceite as cores irei deixar o link  =
 = aqui do ghostbin para que vc use o script sem a cor.      =
 = ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=
-=     LINK = https://ghostbin.com/paste/cqody               =  
+=             Salve especial pra Kyz Team                   =  
 =============================================================
 #############################################################
 salve ->
@@ -199,23 +185,9 @@ salve ->
 John Kaiser, Mindset Security, LILITH, Kyz team 
 -------------------------------------------------------------
 Alivemindset, xCyf, Deivid, SmogHoax and  John-Cross
-#############################################################'
-echo
-sleep 20
-sh index.sh
-elif [ $selindex -eq 4 ]
-then
-echo " 
-\033[01;31m
-
-
-   _|_|   _|                  
-  _|          _|_|_|_|_|_|_|    
-_|_|_|_|  _|  _|    _|    _|  
-  _|      _|  _|    _|    _|  
-  _|      _|  _|    _|    _|  
-
-volte logo...
-"
-fi 
-exit
+#############################################################"
+read space
+banner
+}
+#script começar aqui!
+banner
