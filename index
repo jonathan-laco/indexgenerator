@@ -23,7 +23,7 @@ echo "
 <html>
 <head>
     <title>HACKED</title>
-	<meta charset ="wutf-8">
+	<meta charset ="utf-8">
 <script>alert('owned')</script>
 	<style>
 		body {
