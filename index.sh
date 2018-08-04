@@ -1,13 +1,13 @@
-#!bin/bash
-#Reinald - Jord
-#Script começa na linha 193
 
+#!bin/bash
+#Script começa na linha 193
+#\\||// BY J(*)RD150N \\||//
 #----------INDEX TIPO "1"
 index1() {
 clear
 echo -n "[+]Nome da sua html > " && read -r nomehtml
 test $nomehtml
-if [[ $? = 0 ]]; then
+if [ $? = 0 ]; then
 echo 
 else echo "Atenção! Digite o nome para html"
 sleep 1s
@@ -20,9 +20,10 @@ echo -n "[+]Frase > " && read -r frase
 echo -n "[+]greetz > " && read -r greetz 
 echo -n "[+]musica > " && read -r musica
 echo "
-<html><head>
-	<title>HACKED</title>
-	<meta charset =utf-8>
+<html>
+<head>
+    <title>HACKED</title>
+	<meta charset ="wutf-8">
 <script>alert('owned')</script>
 	<style>
 		body {
@@ -42,11 +43,13 @@ echo "
 <h1>HACKED</h1>
  
 <small>by $Nick <br><br>
-<img src=\"$imagem\"><br><br>
+<img src=$imagem><br><br>
 <center>$frase</center>salve:<marquee><br>
  $greetz <br></marquee>
-<iframe src=\"https://www.youtube.com/embed/$musica?autoplay=true\" width=\"0\" height=\"0\" frameborder=\"0\"></iframe>
-</small></body></html>
+<iframe src=https://www.youtube.com/embed/$musica?autoplay=true\ width=0 height=0 frameborder=0></iframe>
+</small>
+</body>
+</html>
  " >> $nomehtml.html
 #fim do script (index 1)
 clear
@@ -60,7 +63,7 @@ index2() {
 clear
 echo -n "Nome da sua html > " && read -r nomehtml
 test $nomehtml
-if [[ $? = 0 ]]; then
+if [ $? = 0 ]; then
 echo 
 else echo "Atenção! Digite o nome para html"
 sleep 1s
@@ -76,9 +79,9 @@ echo "
 <head>
 <title>Owned</title>
 <style>
-<meta charset=utf-8>
+<meta charset="utf-8">
 body { 
-  background: url( $link ) no-repeat center center fixed; 
+  background: url("$link") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -144,19 +147,35 @@ exit
 #----------------BANNER--------------
 banner() {
 clear
-echo "Gerador de Deface
-==================================
-1- index1
-2- index2
-3- ajuda
-4- exit
-==================================
+sleep 1
+echo "
+010101010101010101010101010101010101010101010101010101
+1               ********************                 1
+0               * Gerador de index *                 0
+1               *         by       *                 1
+1               *    J(*)RD150N    *                 0
+0               ********************                 1
+010101010101010101010101010101010101010101010101010101
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+" 
+sleep 2
+echo "
+Escolha :
+================================
+[1]-> index1
+
+[2]-> index2
+
+[3]-> ajuda
+
+[0]-> exit
+================================
 [?]Escolha um numero: " && read -r selindex
 case $selindex in
 1) index1;;
 2) index2;;
 3) ajuda;;
-4) exit;;
+0) exit;;
 *) echo "Invalido, escolha 1, 2, 3 ou 4"; sleep 1s; banner;;
 esac
 }
@@ -170,12 +189,10 @@ echo "
 =-> na imagem aconselho usar links do imgur                 =
 =-> na musica vc cola so o id dela exemplo = pIU7P2vbTU     =
 =                                                           =
-=-> Background é o fundo da ṕágina                          =
+=-> Background é o fundo da Página                          =
 =-> Caso tenha algum erro, edite o proprio html             =
 =-> obs == PODE OCORRER  ALGUM ERRO NA MUSICA. fica a seu   =
 =   criterio configurar.                                    =
-= -> caso sua shell nao aceite as cores irei deixar o link  =
-= aqui do ghostbin para que vc use o script sem a cor.      =
 = ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=
 =             Salve especial pra Kyz Team                   =  
 =============================================================
