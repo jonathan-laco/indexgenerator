@@ -19,7 +19,7 @@ fi
 #####################################
 read -p "[+]Cor da fonte > "    cor
 read -p "[+]Seu Nickname > "    nick
-read -p "[+]Link da imagem > "  img
+read -p "[+]Link da imagem > "  imagem
 read -p "[+]Frase > "           frase
 read -p "greetz > "             grtz
 ######################################
