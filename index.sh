@@ -47,7 +47,7 @@ echo "
 <body><br>
 <h1>HACKED</h1>
  
-<small>by $Nick <br><br>
+<small>by $nick <br><br>
 <img src=$imagem><br><br>
 <center>$frase</center>salve:<marquee><br>
  $greetz <br></marquee>
@@ -119,7 +119,7 @@ body {
 <table width=100% height=100%><td align=center>
 <DIV class=line1><font color=grey><BIG><strong>HACKED</strong></BIG></div>
 <DIV class=line2><font color=white><BIG>BY</BIG></div>
-<DIV class=line3><font color=white><BIG> $Nick </BIG></div>
+<DIV class=line3><font color=white><BIG> $nick </BIG></div>
 <DIV class=line1><font color=grey><BIG><strong> $frase </strong></BIG></div>
 <DIV class=line2><font color=white><BIG> GREETZ:</BIG></div>
 <marquee><DIV class=line4><font color=white><BIG> $salve </BIG></div></font></marquee>
